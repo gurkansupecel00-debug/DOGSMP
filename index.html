@@ -91,3 +91,123 @@ function copyIP() {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergent-sh | Minecraft Server</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-content">
+    <h1>Emergent-sh</h1>
+    <p>Kendini Minecraft dünyasına bırak!</p>
+    <button onclick="copyIP()">Sunucu IP'sini Kopyala</button>
+  </div>
+</header>
+
+<!-- OYUN MODLARI -->
+<section class="games">
+  <h2>Oyun Modları</h2>
+  <div class="game-list">
+    <div class="card">🌿 Skyblock</div>
+    <div class="card">⚔️ Survival</div>
+    <div class="card">🔥 PvP</div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+/* GENEL AYARLAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #0b0f0c;
+  color: white;
+}
+
+/* HEADER */
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
+              url('https://wallpapercave.com/wp/wp10254418.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+header button {
+  background: #22c55e;
+  color: white;
+  padding: 15px 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background: #1da151;
+  transform: scale(1.05);
+}
+
+/* OYUN MODLARI */
+.games {
+  padding: 60px 20px;
+  text-align: center;
+  background: #0d1110;
+}
+
+.games h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.game-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #111418;
+  padding: 30px;
+  border-radius: 12px;
+  width: 250px;
+  font-size: 22px;
+  border: 2px solid #22c55e;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #1da151;
+}
+function copyIP() {
+  navigator.clipboard.writeText("play.emergent-sh.net");
+  alert("Sunucu IP kopyalandı!");
+}
